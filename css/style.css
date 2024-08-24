@@ -1,0 +1,81 @@
+.move_container {
+    align-items: center;
+}
+
+.tokei01 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+.move_container_clock {
+    position: absolute;
+}
+
+.move_container_fun{
+    position: absolute;
+    animation:10s linear infinite rotation1;
+}
+
+.move_container_zi {
+    position: absolute;
+    animation:60s linear infinite rotation2;
+}
+@keyframes rotation1{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+  }
+  @keyframes rotation2{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+}
+
+/*---時計2---*/
+.tokei02 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+}
+
+.move_container_clock02 {
+    position: absolute;
+    z-index: 1;
+}
+
+.move_container_fun02 {
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi02 {
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}
+
+/*---時計3---*/
+.tokei03 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+}
+
+.move_container_clock03 {
+    position: absolute;
+    z-index: 1;
+}
+
+.move_container_fun03 {
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi03 {
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}

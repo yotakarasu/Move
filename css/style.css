@@ -79,3 +79,124 @@
     z-index: 2;
     animation:60s linear infinite rotation04;
 }
+
+/*---時計4---*/
+.tokei04 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+}
+
+.move_container_clock04 {
+    position: absolute;
+    z-index: 1;
+}
+
+.move_container_fun04 {
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi04 {
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}
+
+/*---時計5---*/
+.tokei05 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+}
+
+.move_container_clock05 {
+    position: absolute;
+    z-index: 1;
+}
+
+.move_container_fun05 {
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi05 {
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}
+
+/*---時計6---*/
+.tokei06 {
+    border: 2px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+}
+
+.move_container_clock06 {
+    position: absolute;
+    z-index: 1;
+}
+
+.move_container_fun06 {
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi06 {
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}
+
+
+/*---時計TOP---*/
+.aaa {
+    border: 1px solid #000000;
+}
+.move_container99 {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.tokei99 {
+}
+
+.move_container_clock99 {
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+
+.move_container_fun99 {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    animation:10s linear infinite rotation03;
+}
+
+.move_container_zi99 {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    animation:60s linear infinite rotation04;
+}

@@ -29,42 +29,51 @@ start02.addEventListener('click', () => {
     );
 });
 
-/*クリックして回す*/
-let start03 = document.getElementById('start03');
-let min03 = document.getElementById('min03');
-let sec03 = document.getElementById('sec03');
-let const03 = 0;
+/*クリックして回して止める。*/
+let isRunning = false;
+let startTime;
+let elapsedTime = 0;
 
-
-document.getElementById('start03').onclick = function() {
-    count =+ 1;
-    console.log(parseInt('const'));
-    if (1 == 2 % 'const' ); {
-        console.log(ok);
-    }  
-       console.log(ok2); 
+start03.addEventListener('click', function () {
+    if (isRunning) {
+        isRunning = false;
+        elapsedTime += Date.now() - startTime;
+        cancelAnimationFrame(intervalId);
+        console.log('一時停止');
+    } else {
+        isRunning = true;
+        startTime = Date.now();
+        animateClock();
+        console.log('再開');
     }
-    
-//     min03.animate(
-//     [
-//     {transform: 'rotate(0deg)'},
-//     {transform: 'rotate(3600deg)'}
-//     ],
+});
 
-//     {fill: 'forwards',
-//     duration: 6000
-//         }
-//     )
+function animateClock() {
+    const currentTime = Date.now();
+    const totalElapsedTime = elapsedTime + (currentTime - startTime);
 
-//     sec03.animate(
-//     [
-//     {transform: 'rotate(0deg)'},
-//     {transform: 'rotate(360deg)'}
-//     ],
-        
-//     {fill: 'forwards',
-//     duration: 6000
-//         }
+    min03.style.transform = `rotate(${(totalElapsedTime / 1000) * 360}deg)`;
+    sec03.style.transform = `rotate(${(totalElapsedTime / 1000) * 6}deg)`;
 
-//     );
-// };
+    if (isRunning) {
+        intervalId = requestAnimationFrame(animateClock);
+    }
+}
+
+/*TOPに戻す時計*/
+let page_top = document.querySelector('tokei99');
+
+page_top.addEventListener('click', scroll_top);
+
+function scroll_top() {
+    window.scroll({ top: 0, behavior: 'smooth'});
+}
+
+window.addEventListener("scroll", scroll_event);
+function scroll_event() {
+    if (window.scrollY > 100) {
+        page_top.style.opacity = "1";
+    } else if (window.scrollY < 100) {
+        page_top.style.opacity = "0";
+    }
+}
